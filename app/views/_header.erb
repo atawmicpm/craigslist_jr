@@ -1,0 +1,8 @@
+<div class="navbar">  
+  <h1>Craigslist</h1>
+  <ul class="category-list">
+    <% Category.all.each do |category| %>
+    <li><a href="/<%= category.name %>"><%= category.name %></a></li>
+  <% end %>
+  </ul>
+</div>

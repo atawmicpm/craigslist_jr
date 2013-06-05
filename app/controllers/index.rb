@@ -4,6 +4,10 @@ get '/' do
   erb :index
 end
 
+get '/posts' do 
+  @posts = Post.all.to_json
+end
+
 get '/:category' do 
   @params = params[:category]
   @category = Category.find_by_name(@params)
