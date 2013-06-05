@@ -1,0 +1,23 @@
+<div class="container">
+    <form action="/posts" method="post">
+    
+    <label>Email:</label>
+    <input type="text" name="post[email]" class="control-group">
+    <br>
+    <label>Title:</label>
+    <input type="text" name="post[title]">
+    <br/>
+    <label>Price:</label>
+    <input type="text" name="post[price]">
+    <br/>
+    <label>Description:</label>
+    <input type="description" name="post[description]">
+    <br/>
+    <label>Category:</label>
+    <select name="post[category_id]" class="btn dropdown-toggle clearfix btn-primary" data-toggle="dropdown">
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+    <input type="submit" value="Post!" class="btn btn-large btn-block btn-primary">
+  </div>
